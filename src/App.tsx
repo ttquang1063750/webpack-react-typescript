@@ -2,11 +2,11 @@ import React from 'react';
 import Hello from './components/hello/Hello';
 import Counter from './components/counter/Counter';
 
-interface Props {
+export interface Props {
     name: string;
 }
 
-interface States {
+export interface States {
     count: number;
 }
 
@@ -31,6 +31,7 @@ class App extends React.Component<Props, States> {
                     onDecrease={(count) => this.handleClick(count)}
                     onIncrease={(count) => this.handleClick(count)}
                 />
+                {this.props.children}
             </div>
         )
     }

@@ -10,9 +10,9 @@ interface Props {
 const Counter = (props: Props) => {
     return (
         <div className={'counter'}>
-            <h3>Counter: {props.displayCount}</h3>
-            <button className={'btn btn-x2'} onClick={() => props.onDecrease(-props.step)}>-</button>
-            <button className={'btn btn-x2'} onClick={() => props.onIncrease(props.step)}>+</button>
+            <h3 className={'counter__title'}>Counter: {props.displayCount}</h3>
+            <button className={'btn btn-x2 counter__btn-decrease'} onClick={() => props.onDecrease(-props.step)}>-</button>
+            <button className={'btn btn-x2 counter__btn-increase'} onClick={() => props.onIncrease(props.step)}>+</button>
         </div>
     );
 };
