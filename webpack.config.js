@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -34,6 +35,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'React & Webpack & Typescript',
             template: path.resolve(__dirname, 'index.html')
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "src/assets", to: "assets" },
+            ],
         }),
     ],
     output: {
