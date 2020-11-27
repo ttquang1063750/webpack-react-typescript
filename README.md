@@ -6,4 +6,8 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Dev
 
-Run `ng run serve` to check live server at http://localhost:8080.
+Run `npm run serve` to check live server at http://localhost:8080.
+
+## Test
+
+Run `npm run test` or `npm run test:watch`
